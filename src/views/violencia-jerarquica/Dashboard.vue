@@ -97,7 +97,7 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                 <v-card elevation="10" class="withbg">
                     <v-card-item>
                         <div class="d-flex align-center justify-space-between pt-sm-2">
-                            <v-card-title class="text-h5">PCPA <span class="text-subtitle-1 text-muted">aprobados</span></v-card-title>
+                            <v-card-title class="text-h5">Casos <span class="text-subtitle-1 text-muted">violencia jerárquica</span></v-card-title>
                             <v-btn  size="small" icon class="bg-error">
                                 <v-avatar size="20" class="text-surface">
                                     <BuildingIcon size="20" />
@@ -109,7 +109,7 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                                 <div class="mt-2">
                                     <h3 class="text-h4">20</h3>
                                     <div class="mt-2">
-                                        <span class="text-subtitle-1 text-muted">unidades educativas</span>
+                                        <span class="text-subtitle-1 text-muted">estudiantes</span>
                                     </div>  
                                 </div>
                             </v-col>
@@ -125,7 +125,7 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                 <v-card elevation="10" class="withbg">
                     <v-card-item>
                         <div class="d-flex align-center justify-space-between pt-sm-2">
-                            <v-card-title class="text-h5">PCPA <span class="text-subtitle-1 text-muted">socializados</span></v-card-title>
+                            <v-card-title class="text-h5">Casos <span class="text-subtitle-1 text-muted">violencia jerárquica psicológica</span></v-card-title>
                             <v-btn  size="small" icon class="bg-success">
                                 <v-avatar size="20" class="text-surface">
                                     <BuildingIcon size="20" />
@@ -137,7 +137,7 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                                 <div class="mt-2">
                                     <h3 class="text-h4">15</h3>
                                     <div class="mt-2">
-                                        <span class="text-subtitle-1 text-muted">unidades educativas</span>
+                                        <span class="text-subtitle-1 text-muted">estudiantes</span>
                                     </div>  
                                 </div>
                             </v-col>
@@ -153,7 +153,7 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                 <v-card elevation="10" class="">
                     <v-card-item>
                         <div class="d-flex align-center justify-space-between pt-sm-2">
-                            <v-card-title class="text-h5">PCPA <span class="text-subtitle-1 text-muted">desarrollo con diagnóstico previo</span></v-card-title>
+                            <v-card-title class="text-h5">Casos <span class="text-subtitle-1 text-muted">violencia jerárquica sexual</span></v-card-title>
                             <v-btn  size="small" icon class="bg-warning">
                                 <v-avatar size="20" class="text-surface">
                                     <QuestionMarkIcon size="20" />
@@ -165,7 +165,7 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                                 <div class="mt-2">
                                     <h3 class="text-h4">15</h3>
                                     <div class="mt-2">
-                                        <span class="text-subtitle-1 text-muted">unidades educativas</span>
+                                        <span class="text-subtitle-1 text-muted">estudiantes</span>
                                     </div>  
                                 </div>
                             </v-col>
@@ -176,12 +176,12 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                 </v-card>
             </div>
         </v-col>        
-        <!-- <v-col cols="12" sm="12" lg="4">
+        <v-col cols="12" sm="12" lg="4">
             <div>
                 <v-card elevation="10" class="secondarybg">
                     <v-card-item>
                         <div class="d-flex align-center justify-space-between pt-sm-2">
-                            <v-card-title class="text-h5">Uniones tempranas <span class="text-subtitle-1 text-muted"></span></v-card-title>
+                            <v-card-title class="text-h5">Casos <span class="text-subtitle-1 text-muted">remitidos a la DNA</span></v-card-title>
                             <v-btn  size="small" icon class="bg-secondary">
                                 <v-avatar size="20" class="text-surface">
                                     <WomanIcon size="20" />
@@ -193,7 +193,7 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                                 <div class="mt-2">
                                     <h3 class="text-h4">25</h3>
                                     <div class="mt-2">
-                                        <span class="text-subtitle-1 text-muted">niñas y/o adolescentes embarazadas</span>
+                                        <span class="text-subtitle-1 text-muted">estudiantes</span>
                                     </div>  
                                 </div>
                             </v-col>
@@ -203,13 +203,13 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                     </div>
                 </v-card>
             </div>
-        </v-col> -->
+        </v-col>
         <v-col cols="12" sm="12" lg="4">
             <div>
                 <v-card elevation="10" class="infobg">
                     <v-card-item>
                         <div class="d-flex align-center justify-space-between pt-sm-2">
-                            <v-card-title class="text-h5">Planes de seguimiento <span class="text-subtitle-1 text-muted"> </span></v-card-title>
+                            <v-card-title class="text-h5">Róptulos observados <span class="text-subtitle-1 text-muted"> preventivo</span></v-card-title>
                             <v-btn  size="small" icon class="bg-info">
                                 <v-avatar size="20" class="text-surface">
                                     <BuildingIcon size="20" />
@@ -221,7 +221,7 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                                 <div class="mt-2">
                                     <h3 class="text-h4">20</h3>
                                     <div class="mt-2">
-                                        <span class="text-subtitle-1 text-muted">unidades educativas</span>
+                                        <span class="text-subtitle-1 text-muted">directivos, maestros(as) o administrativos</span>
                                     </div>  
                                 </div>
                             </v-col>
@@ -237,7 +237,7 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                 <v-card elevation="10" class="errorbg">
                     <v-card-item>
                         <div class="d-flex align-center justify-space-between pt-sm-2">
-                            <v-card-title class="text-h5">Cumplimiento del 80% <span class="text-subtitle-1 text-muted"> </span></v-card-title>
+                            <v-card-title class="text-h5">Róptulos observados <span class="text-subtitle-1 text-muted">definitivo</span></v-card-title>
                             <v-btn  size="small" icon class="bg-error">
                                 <v-avatar size="20" class="text-surface">
                                     <BuildingIcon size="20" />
@@ -249,7 +249,7 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                                 <div class="mt-2">
                                     <h3 class="text-h4">15</h3>
                                     <div class="mt-2">
-                                        <span class="text-subtitle-1 text-muted">unidades educativas</span>
+                                        <span class="text-subtitle-1 text-muted">directivos, maestros(as) o administrativos</span>
                                     </div>  
                                 </div>
                             </v-col>
@@ -260,67 +260,13 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                 </v-card>
             </div>
         </v-col>
-
-        <v-col cols="12" sm="12" lg="8">
-            <v-card elevation="10" class="withbg">
-                <v-card-item>
-                    <div class="d-sm-flex align-center justify-space-between pt-sm-2">
-                        <v-card-title class="text-h5">Actividades de promoción</v-card-title>
-                    </div>
-                    <v-row>
-                        <v-col cols="6" sm="8">
-                            <div class="mt-6">
-                                <h3 class="text-h4">80</h3>
-                                <div class="align-center mt-6 ml-1">
-                                    <h6 class="text-subtitle-2 text-muted pl-5">
-                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" color="primary"></v-icon> Movilización social
-                                    </h6>
-                                    <h6 class="text-subtitle-2 text-muted pl-5">
-                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" color="error"></v-icon> Fomento al desarrollo de habilidades y práctica de valores
-                                    </h6>
-                                    <h6 class="text-subtitle-2 text-muted pl-5">
-                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" color="warning"></v-icon> Capacitación
-                                    </h6>
-                                    <h6 class="text-subtitle-2 text-muted pl-5">
-                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" color="success"></v-icon> Medidas de seguridad en la infraestructura
-                                    </h6>
-                                    <h6 class="text-subtitle-2 text-muted pl-5">
-                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" color="secondary"></v-icon> Normas de convivencia en la unidad unidadEducativa
-                                    </h6>
-                                    <h6 class="text-subtitle-2 text-muted pl-5">
-                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" color="info"></v-icon> Promoción de la participación de las y los estudiantes
-                                    </h6>
-                                    <h6 class="text-subtitle-2 text-muted pl-5">
-                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" :style="`color: ${lightprimary}`"></v-icon> Gestión y articulación con la comunidad educativa
-                                    </h6>
-                                    <h6 class="text-subtitle-2 text-muted pl-5">
-                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" :style="`color: ${lilac}`"></v-icon> Acción comunal
-                                    </h6>
-                                    <h6 class="text-subtitle-2 text-muted pl-5">
-                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" :style="`color: ${coffee}`"></v-icon> Acciones para reducción de riesgos en el contexto y en la unidad educativa
-                                    </h6>  
-                                </div>
-                            </div>
-                        </v-col>
-                        <v-col cols="6" sm="4" class="pl-lg-0">
-                            <div class="d-flex align-center flex-shrink-0">
-                                <apexchart type="donut" height="250" :options="chartOptions" :series="Chart">
-                                </apexchart>
-                            </div>
-                        </v-col>
-                    </v-row>
-                </v-card-item>
-            </v-card>
-        </v-col>
-        <!-- <v-col cols="12" sm="12" lg="4">
-            <div class="mb-6">
-            </div>
+        <v-col cols="12" sm="12" lg="4">
             <div>
-                <v-card elevation="10" class="infobg">
+                <v-card elevation="10">
                     <v-card-item>
                         <div class="d-flex align-center justify-space-between pt-sm-2">
-                            <v-card-title class="text-h5">PCPA <span class="text-subtitle-1 text-muted"> con diagnóstico previo</span></v-card-title>
-                            <v-btn  size="small" icon class="bg-info">
+                            <v-card-title class="text-h5">Imputación <span class="text-subtitle-1 text-muted"> formal</span></v-card-title>
+                            <v-btn  size="small" icon class="bg-success">
                                 <v-avatar size="20" class="text-surface">
                                     <BuildingIcon size="20" />
                                 </v-avatar>
@@ -329,9 +275,9 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                         <v-row>
                             <v-col cols="12">
                                 <div class="mt-2">
-                                    <h3 class="text-h4">20</h3>
+                                    <h3 class="text-h4">15</h3>
                                     <div class="mt-2">
-                                        <span class="text-subtitle-1 text-muted">unidades educativas</span>
+                                        <span class="text-subtitle-1 text-muted">directivos, maestros(as) o administrativos</span>
                                     </div>  
                                 </div>
                             </v-col>
@@ -341,7 +287,35 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                     </div>
                 </v-card>
             </div>
-        </v-col> -->
+        </v-col>
+        <v-col cols="12" sm="12" lg="4">
+            <div>
+                <v-card elevation="10">
+                    <v-card-item>
+                        <div class="d-flex align-center justify-space-between pt-sm-2">
+                            <v-card-title class="text-h5">Imputación <span class="text-subtitle-1 text-muted"> condenatoria</span></v-card-title>
+                            <v-btn  size="small" icon class="bg-warning">
+                                <v-avatar size="20" class="text-surface">
+                                    <BuildingIcon size="20" />
+                                </v-avatar>
+                            </v-btn>
+                        </div>
+                        <v-row>
+                            <v-col cols="12">
+                                <div class="mt-2">
+                                    <h3 class="text-h4">15</h3>
+                                    <div class="mt-2">
+                                        <span class="text-subtitle-1 text-muted">directivos, maestros(as) o administrativos</span>
+                                    </div>  
+                                </div>
+                            </v-col>
+                        </v-row>
+                    </v-card-item>
+                    <div class="mt-3">
+                    </div>
+                </v-card>
+            </div>
+        </v-col>
         <v-col cols="12" sm="12" lg="12">
             <Pivot />
         </v-col>

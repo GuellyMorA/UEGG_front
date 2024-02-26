@@ -119,6 +119,17 @@ const onDateInput = (cleanedInput: any) => {
     }
 };
 
+const personaReporteTipo = [
+    { id: 1, name: 'Estudiante embarazada' },  
+    { id: 2, name: 'Pareja de estudiante' },  
+    { id: 3, name: 'Familia de estudiante' },  
+    { id: 4, name: 'Otro estudiante' },  
+    { id: 5, name: 'Maestro/Maestra' },  
+    { id: 6, name: 'Personal administrativo' },
+    { id: 6, name: 'Director' },
+    { id: 6, name: 'Otros' }
+]
+
 </script>
 <template>
     <v-row>    
@@ -166,11 +177,11 @@ const onDateInput = (cleanedInput: any) => {
 
                             <v-col cols="12" md="12">
                                 <div class="text-h6 w-100 font-weight-regular auth-divider position-relative">
-                                    <span class="bg-surface position-relative text-subtitle-1 text-grey100">¿Quién reporta el embarazo?</span>
+                                    <span class="bg-surface position-relative text-subtitle-1 text-grey100">¿ Quién informa el embarazo ?</span>
                                 </div>
                             </v-col>
 
-                            <v-col cols="12" md="4" >
+                            <!-- <v-col cols="12" md="4" >
                                 <v-text-field v-model="form.reporteNombre1" label="Reporte 1" hide-details required></v-text-field>
                             </v-col>
 
@@ -180,6 +191,18 @@ const onDateInput = (cleanedInput: any) => {
 
                             <v-col cols="12" md="4" >
                                 <v-text-field v-model="form.reporteNombre3" label="Reporte 3" hide-details required></v-text-field>
+                            </v-col> -->
+
+                            <v-col cols="12" md="4" >
+                                <v-select v-model="form.reporteNombre1" :items="personaReporteTipo" item-title="name" item-value="id" label="Reporte 1" return-object></v-select>
+                            </v-col>
+
+                            <v-col cols="12" md="4" >
+                                <v-select v-model="form.reporteNombre2" :items="personaReporteTipo" item-title="name" item-value="id" label="Reporte 2" return-object></v-select>
+                            </v-col>
+
+                            <v-col cols="12" md="4" >
+                                <v-select v-model="form.reporteNombre3" :items="personaReporteTipo" item-title="name" item-value="id" label="Reporte 3" return-object></v-select>
                             </v-col>
                            
                             <v-col cols="12" md="12">
@@ -257,7 +280,7 @@ const onDateInput = (cleanedInput: any) => {
                                 <v-checkbox v-model="form.unionTemprana" label="La adolescente actualmente está casada o convive en pareja" required></v-checkbox>
                             </v-col>
 
-                            <v-col cols="12" md="12" v-if="form.validado" >                                
+                            <v-col cols="12" md="12"  >                                
                                 <v-dialog v-model="dialog" persistent width="auto" >
                                     <template v-slot:activator="{ props }">                                    
                                         <v-btn size="large" rounded="pill" color="primary" class="rounded-pill" block type="button" flat v-bind="props">Registrar</v-btn>

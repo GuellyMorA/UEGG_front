@@ -26,6 +26,16 @@ const form = ref({
     registroAnterior: false,
     comisionCargo: '',
     comisionNombre: '',
+    comisionSocializacionEstudiante: false,
+    comisionSocializacionDirector: false,
+    comisionSocializacionMaestro: false,
+    comisionSocializacionPadre: false,
+    comisionSocializacionOtro: false,
+    comisionSocializacionEstudianteNombre: '',
+    comisionSocializacionDirectorNombre: '',
+    comisionSocializacionMaestroNombre: '',
+    comisionSocializacionPadreNombre: '',
+    comisionSocializacionOtroNombre: '',
     temaDerecho: '',
     temaNorma: '',
     temaDisciplinario: '',
@@ -47,6 +57,16 @@ const form = ref({
     temaSeguimiento: '',
     comisionAprobacionCargo: '',
     comisionAprobacionNombre: '',
+    comisionAprobacionEstudiante: false,
+    comisionAprobacionDirector: false,
+    comisionAprobacionMaestro: false,
+    comisionAprobacionPadre: false,
+    comisionAprobacionOtro: false,
+    comisionAprobacionEstudianteNombre: '',
+    comisionAprobacionDirectorNombre: '',
+    comisionAprobacionMaestroNombre: '',
+    comisionAprobacionPadreNombre: '',
+    comisionAprobacionOtroNombre: '',
     fechaAprobacion: '',
     vigenciaAprobacion: '',
     validado: false
@@ -120,6 +140,16 @@ const reset = () => {
         registroAnterior: false,
         comisionCargo: '',
         comisionNombre: '',
+        comisionSocializacionEstudiante: false,
+        comisionSocializacionDirector: false,
+        comisionSocializacionMaestro: false,
+        comisionSocializacionPadre: false,
+        comisionSocializacionOtro: false,
+        comisionSocializacionEstudianteNombre: '',
+        comisionSocializacionDirectorNombre: '',
+        comisionSocializacionMaestroNombre: '',
+        comisionSocializacionPadreNombre: '',
+        comisionSocializacionOtroNombre: '',
         temaDerecho: '',
         temaNorma: '',
         temaDisciplinario: '',
@@ -132,6 +162,18 @@ const reset = () => {
         temaSeguimiento: '',
         comisionAprobacionCargo: '',
         comisionAprobacionNombre: '',
+        comisionAprobacionCargo: '',
+        comisionAprobacionNombre: '',
+        comisionAprobacionEstudiante: false,
+        comisionAprobacionDirector: false,
+        comisionAprobacionMaestro: false,
+        comisionAprobacionPadre: false,
+        comisionAprobacionOtro: false,
+        comisionAprobacionEstudianteNombre: '',
+        comisionAprobacionDirectorNombre: '',
+        comisionAprobacionMaestroNombre: '',
+        comisionAprobacionPadreNombre: '',
+        comisionAprobacionOtroNombre: '',
         fechaAprobacion: '',
         vigenciaAprobacion: '',
         validado: false
@@ -201,7 +243,7 @@ const reset = () => {
                                 <v-checkbox v-model="form.registroAnterior" label="¿Se realizó un diagnóstico antes de iniciar la construcción del PCPA?" required></v-checkbox>
                             </v-col>
 
-                            <v-col cols="12" md="4" >
+                            <!-- <v-col cols="12" md="4" >
                                 Miembros de la comisión de construcción del PCPA
                             </v-col>
 
@@ -211,6 +253,50 @@ const reset = () => {
 
                             <v-col cols="12" md="4" >
                                 <v-text-field v-model="form.comisionNombre" label="Nombre" hide-details required></v-text-field>
+                            </v-col> -->
+
+                            <v-col cols="12" md="12">
+                                Miembros de la comisión de construcción del PCPA
+                            </v-col>
+
+                            <v-col cols="12" md="2" >
+                                <v-checkbox v-model="form.comisionSocializacionEstudiante" label="Estudiantes" ></v-checkbox>
+                            </v-col>
+
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.comisionSocializacionEstudianteNombre" :counter="10" label="Nombre" hide-details :disabled="!form.comisionSocializacionEstudiante" ></v-text-field>
+                            </v-col>
+
+                            <v-col cols="12" md="2" >
+                                <v-checkbox v-model="form.comisionSocializacionDirector" label="Director(a)" ></v-checkbox>
+                            </v-col>
+
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.comisionSocializacionDirectorNombre" :counter="10" label="Nombre" hide-details :disabled="!form.comisionSocializacionDirector" ></v-text-field>
+                            </v-col>
+
+                            <v-col cols="12" md="2" >
+                                <v-checkbox v-model="form.comisionSocializacionMaestro" label="Maestro(a)" ></v-checkbox>
+                            </v-col>
+
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.comisionSocializacionMaestroNombre" :counter="10" label="Nombre" hide-details :disabled="!form.comisionSocializacionMaestro" ></v-text-field>
+                            </v-col>
+
+                            <v-col cols="12" md="2" >
+                                <v-checkbox v-model="form.comisionSocializacionPadre" label="Padres/Matres" ></v-checkbox>
+                            </v-col>
+
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.comisionSocializacionPadreNombre" :counter="10" label="Nombre" hide-details :disabled="!form.comisionSocializacionPadre" ></v-text-field>
+                            </v-col>
+
+                            <v-col cols="12" md="2" >
+                                <v-checkbox v-model="form.comisionSocializacionOtro" label="Otros" ></v-checkbox>
+                            </v-col>
+
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.comisionSocializacionOtroNombre" :counter="10" label="Nombre" hide-details :disabled="!form.comisionSocializacionOtro" ></v-text-field>
                             </v-col>
 
                             <v-col cols="12" md="12" >
@@ -218,7 +304,7 @@ const reset = () => {
                             </v-col>
 
                             <v-col cols="12" md="6" >
-                                <v-checkbox v-model="form.temaDerecho" label="  " required></v-checkbox>
+                                <v-checkbox v-model="form.temaDerecho" label="Derechos y deberes" required></v-checkbox>
                             </v-col>
 
                             <v-col cols="12" md="6" >
@@ -276,13 +362,54 @@ const reset = () => {
                                 </div>
                             </v-col>
 
-                            <v-col cols="12" md="6" >
+                            <!-- <v-col cols="12" md="6" >
                                 <v-text-field v-model="form.comisionAprobacionCargo" label="Cargo" hide-details required></v-text-field>
                             </v-col>
 
                             <v-col cols="12" md="6" >
                                 <v-text-field v-model="form.comisionAprobacionNombre" label="Nombre" hide-details required></v-text-field>
+                            </v-col> -->
+
+                            <v-col cols="12" md="2" >
+                                <v-checkbox v-model="form.comisionAprobacionEstudiante" label="Estudiantes" ></v-checkbox>
                             </v-col>
+
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.comisionAprobacionEstudianteNombre" :counter="10" label="Nombre" hide-details :disabled="!form.comisionAprobacionEstudiante" ></v-text-field>
+                            </v-col>
+
+                            <v-col cols="12" md="2" >
+                                <v-checkbox v-model="form.comisionAprobacionDirector" label="Director(a)" ></v-checkbox>
+                            </v-col>
+
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.comisionAprobacionDirectorNombre" :counter="10" label="Nombre" hide-details :disabled="!form.comisionAprobacionDirector" ></v-text-field>
+                            </v-col>
+
+                            <v-col cols="12" md="2" >
+                                <v-checkbox v-model="form.comisionAprobacionMaestro" label="Maestro(a)" ></v-checkbox>
+                            </v-col>
+
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.comisionAprobacionMaestroNombre" :counter="10" label="Nombre" hide-details :disabled="!form.comisionAprobacionMaestro" ></v-text-field>
+                            </v-col>
+
+                            <v-col cols="12" md="2" >
+                                <v-checkbox v-model="form.comisionAprobacionPadre" label="Padres/Matres" ></v-checkbox>
+                            </v-col>
+
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.comisionAprobacionPadreNombre" :counter="10" label="Nombre" hide-details :disabled="!form.comisionAprobacionPadre" ></v-text-field>
+                            </v-col>
+
+                            <v-col cols="12" md="2" >
+                                <v-checkbox v-model="form.comisionAprobacionOtro" label="Otros" ></v-checkbox>
+                            </v-col>
+
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.comisionAprobacionOtroNombre" :counter="10" label="Nombre" hide-details :disabled="!form.comisionAprobacionOtro" ></v-text-field>
+                            </v-col>
+
 
                             <v-col cols="12" md="6" >
                                 <v-text-field v-model="form.fechaAprobacion" label="Fecha de aprobación"  @input="onDateInputAprobacion" placeholder="DD/MM/AAAA" hide-details required></v-text-field>

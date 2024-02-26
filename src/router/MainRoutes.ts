@@ -112,6 +112,21 @@ const MainRoutes = {
             component: () => import('@/views/violencia-jerarquica/SeguimientoCasoDelito.vue')
         },
         {
+            name: 'ViolenciaJerarquica-SeguimientoProcesoPenal13021320',
+            path: '/violencia/jerarquica/seguimiento/proceso/penal/1302/1320',
+            component: () => import('@/views/violencia-jerarquica/SeguimientoProcesoPenal13021320.vue')
+        },
+        {
+            name: 'ViolenciaJerarquica-SeguimientoProcesoAdministrativo13021320',
+            path: '/violencia/jerarquica/seguimiento/proceso/administrativo/1302/1320',
+            component: () => import('@/views/violencia-jerarquica/SeguimientoProcesoAdministrativo13021320.vue')
+        },
+        {
+            name: 'ViolenciaJerarquica-Dashboard',
+            path: '/violencia/jerarquica/dashboard',
+            component: () => import('@/views/violencia-jerarquica/Dashboard.vue')
+        },
+        {
             name: 'ViolenciaEntrePares',
             path: '/violencia/entre/pares',
             component: () => import('@/views/violencia-entre-pares/Index.vue')

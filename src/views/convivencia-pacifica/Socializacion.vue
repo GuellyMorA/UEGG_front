@@ -149,7 +149,14 @@ const reset = () => {
     dialogSave.value = false;
 };
 
-
+const actividadTipo = [
+    { id: 1, name: 'Carteles' },  
+    { id: 2, name: 'Medios de comunicación interna' },  
+    { id: 3, name: 'Redes sociales' },  
+    { id: 4, name: 'Talleres' },  
+    { id: 5, name: 'Ferias' },  
+    { id: 6, name: 'Otros' }
+]
 
 </script>
 <template>
@@ -158,7 +165,7 @@ const reset = () => {
             <v-card elevation="10" class="withbg">
                 <v-card-item>
                     <div class="d-sm-flex align-center justify-space-between pt-sm-2">
-                        <v-card-title class="text-h5">Registro de datos</v-card-title>
+                        <v-card-title class="text-h5">Modificación a socialización e implementación </v-card-title>
                     </div>
                     <v-form v-model="valid" class="">
                         <v-container>
@@ -177,7 +184,7 @@ const reset = () => {
                             </v-col>
 
                             <v-col cols="12" md="12">
-                                Miembros de la comisión de socialización del PCPA ¿ Quiénes conforman la comisión de convivencia pacífica y armónica ?
+                                Miembros de la comisión de socialización del PCPA
                             </v-col>
 
                             <v-col cols="12" md="2" >
@@ -222,7 +229,7 @@ const reset = () => {
 
                             <v-col cols="12" md="12">                                
                                 <div class="text-h6 w-100 font-weight-regular auth-divider position-relative">
-                                    <span class="bg-surface position-relative text-subtitle-1 text-grey100">Implementación</span>
+                                    <span class="bg-surface position-relative text-subtitle-1 text-grey100">Actividades para el plan de socialización</span>
                                 </div>
                             </v-col>
 
@@ -278,8 +285,12 @@ const reset = () => {
                                 Actividad 1
                             </v-col>
 
-                            <v-col cols="12" md="6" >
+                            <!-- <v-col cols="12" md="6" >
                                 <v-text-field v-model="form.actividad1" label="Nombre" hide-details required></v-text-field>
+                            </v-col> -->
+
+                            <v-col cols="12" md="6" >
+                                <v-select v-model="form.actividad1" :items="actividadTipo" item-title="name" item-value="id" label="Nombre" return-object></v-select>
                             </v-col>
 
                             <v-col cols="12" md="4" >
@@ -290,8 +301,12 @@ const reset = () => {
                                 Actividad 2
                             </v-col>
 
-                            <v-col cols="12" md="6" >
+                            <!-- <v-col cols="12" md="6" >
                                 <v-text-field v-model="form.actividad2" label="Nombre" hide-details required></v-text-field>
+                            </v-col> -->
+
+                            <v-col cols="12" md="6" >
+                                <v-select v-model="form.actividad2" :items="actividadTipo" item-title="name" item-value="id" label="Nombre" return-object></v-select>
                             </v-col>
 
                             <v-col cols="12" md="4" >
@@ -302,8 +317,12 @@ const reset = () => {
                                 Actividad 3
                             </v-col>
 
-                            <v-col cols="12" md="6" >
+                            <!-- <v-col cols="12" md="6" >
                                 <v-text-field v-model="form.actividad3" label="Nombre" hide-details required></v-text-field>
+                            </v-col> -->
+
+                            <v-col cols="12" md="6" >
+                                <v-select v-model="form.actividad3" :items="actividadTipo" item-title="name" item-value="id" label="Nombre" return-object></v-select>
                             </v-col>
 
                             <v-col cols="12" md="4" >
@@ -314,8 +333,12 @@ const reset = () => {
                                 Actividad 4
                             </v-col>
 
-                            <v-col cols="12" md="6" >
+                            <!-- <v-col cols="12" md="6" >
                                 <v-text-field v-model="form.actividad4" label="Nombre" hide-details required></v-text-field>
+                            </v-col> -->
+
+                            <v-col cols="12" md="6" >
+                                <v-select v-model="form.actividad4" :items="actividadTipo" item-title="name" item-value="id" label="Nombre" return-object></v-select>
                             </v-col>
 
                             <v-col cols="12" md="4" >
@@ -326,8 +349,12 @@ const reset = () => {
                                 Actividad 5
                             </v-col>
 
-                            <v-col cols="12" md="6" >
+                            <!-- <v-col cols="12" md="6" >
                                 <v-text-field v-model="form.actividad5" label="Nombre" hide-details required></v-text-field>
+                            </v-col> -->
+
+                            <v-col cols="12" md="6" >
+                                <v-select v-model="form.actividad5" :items="actividadTipo" item-title="name" item-value="id" label="Nombre" return-object></v-select>
                             </v-col>
 
                             <v-col cols="12" md="4" >
