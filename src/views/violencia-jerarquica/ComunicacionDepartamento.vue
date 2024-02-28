@@ -23,9 +23,13 @@ const formSearch = ref({
 const form = ref({
     numeroCaso: '',
     fechaAgresion: null,
-    referenciaDenuncia: false,
-    fechaReferenciaDenuncia: null,
-    instanciaReferencia: null,
+    fechaComunicacion: null,
+    codigoSie: null,
+    departamento: null,
+    municipio: null,
+    nivel: null,
+    unidadEducativa: null,
+    director: null,
     victimaPaterno: null,
     victimaMaterno: null,
     victimaNombre: null,
@@ -44,7 +48,9 @@ const form = ref({
     agresorComplemento: null,
     tipoViolencia: null,
     descripcionHechoDano: null,
-    recepcionReferenciaDenuncia: false
+    accionRealizada: null,
+    instanciaReferida: null,
+    fechaComunicacionDistrito: null
 });
 
 const sieRules = [
@@ -72,9 +78,13 @@ const reset = () => {
     form.value = {
         numeroCaso: '',
         fechaAgresion: null,
-        referenciaDenuncia: false,
-        fechaReferenciaDenuncia: null,
-        instanciaReferencia: null,
+        fechaComunicacion: null,
+        codigoSie: null,
+        departamento: null,
+        municipio: null,
+        nivel: null,
+        unidadEducativa: null,
+        director: null,
         victimaPaterno: null,
         victimaMaterno: null,
         victimaNombre: null,
@@ -93,7 +103,9 @@ const reset = () => {
         agresorComplemento: null,
         tipoViolencia: null,
         descripcionHechoDano: null,
-        recepcionReferenciaDenuncia: false
+        accionRealizada: null,
+        instanciaReferida: null,
+        fechaComunicacionDistrito: null
     };
     dialogSave.value = false;
 };
@@ -105,7 +117,12 @@ const onDateInput1 = (event: any) => {
 
 const onDateInput2 = (event: any) => {
     const cleanedInput = event.target.value.replace(/\D/g, '');
-    form.value.fechaReferenciaDenuncia = onDateInput(cleanedInput);
+    form.value.fechaComunicacion = onDateInput(cleanedInput);
+};
+
+const onDateInput3 = (event: any) => {
+    const cleanedInput = event.target.value.replace(/\D/g, '');
+    form.value.fechaComunicacionDistrito = onDateInput(cleanedInput);
 };
 
 const onDateInput = (cleanedInput: any) => {
@@ -220,7 +237,7 @@ const plants = [
             <v-card elevation="10" class="withbg">
                 <v-card-item>
                     <div class="d-sm-flex align-center justify-space-between pt-sm-2">
-                        <v-card-title class="text-h5">Búsqueda de caso</v-card-title>
+                        <v-card-title class="text-h5">Búsqueda de comunicación</v-card-title>
                     </div>
                     <v-form v-model="valid" class="">
                         <v-container>
@@ -262,14 +279,14 @@ const plants = [
             <v-card elevation="10" class="withbg">
                 <v-card-item>
                     <div class="d-sm-flex align-center justify-space-between pt-sm-2">
-                        <v-card-title class="text-h5">Registro de la referencia o denuncia del caso a la DNA </v-card-title>
+                        <v-card-title class="text-h5">Registro de la comunicación </v-card-title>
                     </div>
                     <v-form v-model="valid" class="">
                         <v-container>
                         <v-row>
                             <v-col cols="12" md="12">                                
                                 <div class="text-h6 w-100 font-weight-regular auth-divider position-relative">
-                                    <span class="bg-surface position-relative text-subtitle-1 text-grey100">Referencia o denuncia</span>
+                                    <span class="bg-surface position-relative text-subtitle-1 text-grey100">Datos de la Unidad Educativa</span>
                                 </div>
                             </v-col>
                             <v-col cols="12" md="4">
@@ -279,21 +296,34 @@ const plants = [
                             <v-col cols="12" md="4" >
                                 <v-text-field v-model="form.fechaAgresion" label="Fecha de la agresión" @input="onDateInput1" placeholder="DD/MM/AAAA" hide-details required></v-text-field>
                             </v-col>
-                            
-                            <v-col cols="12" md="4" >
-                                <v-radio-group v-model="form.referenciaDenuncia" inline>
-                                    <v-radio label="Referencia" value="referencia"></v-radio>
-                                    <v-radio label="Denuncia"  value="denuncia"></v-radio>
-                                </v-radio-group>
-                            </v-col>
 
                             <v-col cols="12" md="4" >
-                                <v-text-field v-model="form.fechaReferenciaDenuncia" label="Fecha de la referencia o denuncia" @input="onDateInput2" placeholder="DD/MM/AAAA" hide-details required></v-text-field>
+                                <v-text-field v-model="form.fechaComunicacion" label="Fecha de comunicación" @input="onDateInput2" placeholder="DD/MM/AAAA" hide-details required></v-text-field>
                             </v-col>
                             
-                            <v-col cols="12" md="8" >
-                                <v-text-field v-model="form.instanciaReferencia" label="Instancia a la que se refiere o denuncia el caso" required></v-text-field>
-                            </v-col>                            
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.codigoSie" label="Código SIE" required></v-text-field>
+                            </v-col>
+                            
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.departamento" label="Departamento" required></v-text-field>
+                            </v-col>
+                            
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.municipio" label="Municipio" required></v-text-field>
+                            </v-col>
+                            
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.nivel" label="Nivel" required></v-text-field>
+                            </v-col>
+                            
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.unidadEducativa" label="Nombre de la Unidad Educativa" required></v-text-field>
+                            </v-col>
+                            
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.director" label="Nombre del director(a)" required></v-text-field>
+                            </v-col>
                             
                             <v-col cols="12" md="12">
                                 <div class="text-h6 w-100 font-weight-regular auth-divider position-relative">
@@ -377,16 +407,24 @@ const plants = [
                                 </div>
                             </v-col>
 
-                            <v-col cols="12" md="3" >
+                            <v-col cols="12" md="4" >
                                 <v-select v-model="form.tipoViolencia" :items="violenciaTipo" item-title="name" item-value="id" label="Tipo de violencia" return-object></v-select>
                             </v-col>
 
-                            <v-col cols="12" md="6" >
+                            <v-col cols="12" md="8" >
                                 <v-text-field v-model="form.descripcionHechoDano" label="Descripción del hecho y daño" hide-details required></v-text-field>
                             </v-col>
 
-                            <v-col cols="12" md="3" >
-                                <v-checkbox v-model="form.recepcionReferenciaDenuncia" label="¿ Se recepcionó la ficha de referencia o denuncia ?" required></v-checkbox>
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.accionRealizada" label="Acciones que se realizaron" hide-details required></v-text-field>
+                            </v-col>
+
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.instanciaReferida" label="Instancias a las que se refirió" hide-details required></v-text-field>
+                            </v-col>
+
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.fechaComunicacionDistrito" label="Fecha de comunicación a la Dirección Distrital" @input="onDateInput3" placeholder="DD/MM/AAAA" hide-details required></v-text-field>
                             </v-col>
 
                             <v-col cols="12" md="12" >                                

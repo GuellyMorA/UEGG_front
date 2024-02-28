@@ -190,7 +190,7 @@ const reset = () => {
                             </v-col>
                             
                             <v-col cols="12" md="12" >
-                                <v-text-field v-model="form.solucioAcciones" label="Solución/acciones a seguir" hide-details required ></v-text-field>
+                                <v-text-field v-model="form.solucioAcciones" label="Acciones a seguir" hide-details required ></v-text-field>
                             </v-col>
 
                             <v-col cols="12" md="12" >                                

@@ -36,6 +36,7 @@ const form = ref({
     materno: '',
     nombre: '',
     edad: null,
+    fechaNacimiento: null,
     sexo: '',
     genero: '',
     nivel: '',
@@ -82,6 +83,7 @@ const reset = () => {
         materno: '',
         nombre: '',
         edad: null,
+        fechaNacimiento: null,
         sexo: '',
         genero: '',
         nivel: '',
@@ -95,6 +97,11 @@ const reset = () => {
 const onDateInput1 = (event: any) => {
     const cleanedInput = event.target.value.replace(/\D/g, '');
     form.value.fechaAgresion = onDateInput(cleanedInput);
+};
+
+const onDateInput2 = (event: any) => {
+    const cleanedInput = event.target.value.replace(/\D/g, '');
+    form.value.fechaNacimiento = onDateInput(cleanedInput);
 };
 
 const onDateInput = (cleanedInput: any) => {
@@ -245,7 +252,7 @@ const plants = [
             <v-card elevation="10" class="withbg">
                 <v-card-item>
                     <div class="d-sm-flex align-center justify-space-between pt-sm-2">
-                        <v-card-title class="text-h5">Registro de estudiante embarazada</v-card-title>
+                        <v-card-title class="text-h5">Registro de víctima</v-card-title>
                     </div>
                     <v-form v-model="valid" class="">
                         <v-container>
@@ -295,8 +302,12 @@ const plants = [
                                 <v-text-field v-model="form.nombre" label="Nombre(s)" hide-details required></v-text-field>
                             </v-col>
 
-                            <v-col cols="12" md="4" >
+                            <!-- <v-col cols="12" md="4" >
                                 <v-text-field v-model="form.edad" type="number" label="Edad" hide-details required></v-text-field>
+                            </v-col> -->
+                            
+                            <v-col cols="12" md="4" >
+                                <v-text-field v-model="form.fechaNacimiento" label="Fecha de nacimiento" @input="onDateInput2" placeholder="DD/MM/AAAA" hide-details required></v-text-field>
                             </v-col>
 
                             <v-col cols="12" md="4" >
@@ -315,7 +326,7 @@ const plants = [
                                 <v-text-field v-model="form.grado" label="Grado" hide-details required></v-text-field>
                             </v-col>
 
-                            <v-col cols="12" md="4" >
+                            <v-col cols="12" md="8" >
                                 <v-text-field v-model="form.direccionActual" label="Dirección actual" hide-details required></v-text-field>
                             </v-col>
 

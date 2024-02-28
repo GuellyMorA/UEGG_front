@@ -316,7 +316,7 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                 </v-card>
             </div>
         </v-col>
-        <v-col cols="12" sm="12" lg="4">
+        <!-- <v-col cols="12" sm="12" lg="4">
             <div>
                 <v-card elevation="10">
                     <v-card-item>
@@ -343,7 +343,7 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                     </div>
                 </v-card>
             </div>
-        </v-col>
+        </v-col> -->
         <v-col cols="12" sm="12" lg="4">
             <div>
                 <v-card elevation="10" class="infobg">

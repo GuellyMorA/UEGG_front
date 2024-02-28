@@ -77,9 +77,9 @@ import UiParentCard from '@/components/shared/UiParentCard.vue';
                     <v-row>
                         <v-col cols="12" sm="12">
                             <div class="text-subtitle-1 text-grey100 pb-1" data-v-81e7cbfb="">Dirección distrital</div>
-                            <v-btn rounded="pill" to="/embarazo/adolecente/seguimiento/actuacion" color="primary" class="v-btn--size-large v-btn--variant-elevated mt-4 mb-2 px-7">Ingresar</v-btn>
+                            <v-btn rounded="pill" to="/violencia/jerarquica/comunicacion/distrito" color="primary" class="v-btn--size-large v-btn--variant-elevated mt-4 mb-2 px-7">Ingresar</v-btn>
                         </v-col>
-                    </v-row>
+                    </v-row>    
                 </v-card-item>
                 <img src="@/assets/welcome-bg2-660061c8.png" class="bg-img-1 mb-n4 mt-4" alt="image" width="330" data-v-81e7cbfb="">
             </v-card>
@@ -93,7 +93,7 @@ import UiParentCard from '@/components/shared/UiParentCard.vue';
                     <v-row>
                         <v-col cols="12" sm="12">
                             <div class="text-subtitle-1 text-grey100 pb-1" data-v-81e7cbfb="">Dirección departamental<br><br></div>
-                            <v-btn rounded="pill" to="/embarazo/adolecente/seguimiento/situacion" color="primary" class="v-btn--size-large v-btn--variant-elevated mt-4 mb-2 px-7">Ingresar</v-btn>
+                            <v-btn rounded="pill" to="/violencia/jerarquica/comunicacion/departamento" color="primary" class="v-btn--size-large v-btn--variant-elevated mt-4 mb-2 px-7">Ingresar</v-btn>
                         </v-col>
                     </v-row>
                 </v-card-item>
@@ -108,8 +108,8 @@ import UiParentCard from '@/components/shared/UiParentCard.vue';
                     </div>
                     <v-row>
                         <v-col cols="12" sm="12">
-                            <div class="text-subtitle-1 text-grey100 pb-1" data-v-81e7cbfb="">Sanciones por faltas graves<br><br></div>
-                            <v-btn rounded="pill" to="/embarazo/adolecente/seguimiento/situacion" color="primary" class="v-btn--size-large v-btn--variant-elevated mt-4 mb-2 px-7">Ingresar</v-btn>
+                            <div class="text-subtitle-1 text-grey100 pb-1" data-v-81e7cbfb="">Sanciones<br><br></div>
+                            <v-btn rounded="pill" to="/violencia/jerarquica/seguimiento/sancion" color="primary" class="v-btn--size-large v-btn--variant-elevated mt-4 mb-2 px-7">Ingresar</v-btn>
                         </v-col>
                     </v-row>
                 </v-card-item>
@@ -125,7 +125,7 @@ import UiParentCard from '@/components/shared/UiParentCard.vue';
                     <v-row>
                         <v-col cols="12" sm="12">
                             <div class="text-subtitle-1 text-grey100 pb-1" data-v-81e7cbfb="">Casos de infracción<br><br></div>
-                            <v-btn rounded="pill" to="/embarazo/adolecente/seguimiento/situacion" color="primary" class="v-btn--size-large v-btn--variant-elevated mt-4 mb-2 px-7">Ingresar</v-btn>
+                            <v-btn rounded="pill" to="/violencia/jerarquica/seguimiento/caso/infractor" color="primary" class="v-btn--size-large v-btn--variant-elevated mt-4 mb-2 px-7">Ingresar</v-btn>
                         </v-col>
                     </v-row>
                 </v-card-item>
@@ -141,7 +141,7 @@ import UiParentCard from '@/components/shared/UiParentCard.vue';
                     <v-row>
                         <v-col cols="12" sm="12">
                             <div class="text-subtitle-1 text-grey100 pb-1" data-v-81e7cbfb="">Casos de delito<br><br></div>
-                            <v-btn rounded="pill" to="/embarazo/adolecente/seguimiento/situacion" color="primary" class="v-btn--size-large v-btn--variant-elevated mt-4 mb-2 px-7">Ingresar</v-btn>
+                            <v-btn rounded="pill" to="/violencia/jerarquica/seguimiento/caso/delito" color="primary" class="v-btn--size-large v-btn--variant-elevated mt-4 mb-2 px-7">Ingresar</v-btn>
                         </v-col>
                     </v-row>
                 </v-card-item>
@@ -156,8 +156,8 @@ import UiParentCard from '@/components/shared/UiParentCard.vue';
                     </div>
                     <v-row>
                         <v-col cols="12" sm="12">
-                            <div class="text-subtitle-1 text-grey100 pb-1" data-v-81e7cbfb="">Proceso penal 1302 y 1320<br><br></div>
-                            <v-btn rounded="pill" to="/embarazo/adolecente/seguimiento/situacion" color="primary" class="v-btn--size-large v-btn--variant-elevated mt-4 mb-2 px-7">Ingresar</v-btn>
+                            <div class="text-subtitle-1 text-grey100 pb-1" data-v-81e7cbfb="">Proceso penal Ds. 1302 y Ds. 1320<br><br></div>
+                            <v-btn rounded="pill" to="/violencia/jerarquica/seguimiento/proceso/penal/1302/1320" color="primary" class="v-btn--size-large v-btn--variant-elevated mt-4 mb-2 px-7">Ingresar</v-btn>
                         </v-col>
                     </v-row>
                 </v-card-item>
@@ -172,15 +172,15 @@ import UiParentCard from '@/components/shared/UiParentCard.vue';
                     </div>
                     <v-row>
                         <v-col cols="12" sm="12">
-                            <div class="text-subtitle-1 text-grey100 pb-1" data-v-81e7cbfb="">Proceso administrativo 1302 y 1320<br><br></div>
-                            <v-btn rounded="pill" to="/embarazo/adolecente/seguimiento/situacion" color="primary" class="v-btn--size-large v-btn--variant-elevated mt-4 mb-2 px-7">Ingresar</v-btn>
+                            <div class="text-subtitle-1 text-grey100 pb-1" data-v-81e7cbfb="">Proceso administrativo Ds. 1302 y Ds. 1320<br><br></div>
+                            <v-btn rounded="pill" to="/violencia/jerarquica/seguimiento/proceso/administrativo/1302/1320" color="primary" class="v-btn--size-large v-btn--variant-elevated mt-4 mb-2 px-7">Ingresar</v-btn>
                         </v-col>
                     </v-row>
                 </v-card-item>
                 <img src="@/assets/welcome-bg2-660061c8.png" class="bg-img-1 mb-n4 mt-4" alt="image" width="330" data-v-81e7cbfb="">
             </v-card>
         </v-col>
-        <v-col cols="12" lg="3" sm="6">
+        <!-- <v-col cols="12" lg="3" sm="6">
             <v-card elevation="10" class="withbg">
                 <v-card-item>
                     <div class="d-sm-flex align-center justify-space-between pt-sm-2">
@@ -211,8 +211,8 @@ import UiParentCard from '@/components/shared/UiParentCard.vue';
                 </v-card-item>
                 <img src="@/assets/welcome-bg2-660061c8.png" class="bg-img-1 mb-n4 mt-4" alt="image" width="330" data-v-81e7cbfb="">
             </v-card>
-        </v-col>
-        <v-col cols="12" lg="4" sm="6">
+        </v-col> -->
+        <v-col cols="12" lg="3" sm="6">
             <v-card elevation="10" class="withbg">
                 <v-card-item>
                     <div class="d-sm-flex align-center justify-space-between pt-sm-2">
@@ -221,7 +221,7 @@ import UiParentCard from '@/components/shared/UiParentCard.vue';
                     <v-row>
                         <v-col cols="12" sm="12">
                             <div class="text-subtitle-1 text-grey100 pb-1" data-v-81e7cbfb=""><br><br></div>
-                            <v-btn rounded="pill" to="/embarazo/adolecente/dashboard" color="primary" class="v-btn--size-large v-btn--variant-elevated mt-4 mb-2 px-7">Ingresar</v-btn>
+                            <v-btn rounded="pill" to="/violencia/jerarquica/dashboard" color="primary" class="v-btn--size-large v-btn--variant-elevated mt-4 mb-2 px-7">Ingresar</v-btn>
                         </v-col>
                     </v-row>
                 </v-card-item>

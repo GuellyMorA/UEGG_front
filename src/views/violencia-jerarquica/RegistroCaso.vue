@@ -67,22 +67,23 @@ const reset = () => {
     form.value = {
         numeroCaso: '',
         fechaAgresion: null,
-        cantidadAgresor: '',
-        numeroAgresor: '',
-        codigoRda: null,
-        carnetIdentidad: null,
-        complemento: '',
-        paterno: '',
-        materno: '', 
-        nombre: '',
-        edad: null,
-        sexo: '',
-        genero: '',
-        cargo: '',
-        nivel: '',
-        direccionActual: '',
-        celular: '',
-        correo: ''
+        periodo: null,
+        comunicacionTutor: false,
+        comunicacionTutorNombre: '',
+        comunicacionTutorFecha: null,
+        descripcionBreve: '',
+        violenciaFisica: false,
+        violenciaFisicaDescripcion: '',
+        violenciaFisicaGravedad: null,
+        violenciaFisicaValoracion: null,
+        violenciaPsicologica: false,
+        violenciaPsicologicaDescripcion: '',
+        violenciaPsicologicaGravedad: null,
+        violenciaPsicologicaValoracion: null,
+        violenciaSexual: false,
+        violenciaSexualDescripcion: '',
+        violenciaSexualGravedad: null,
+        violenciaSexualValoracion: null,
     };
     dialogSave.value = false;
 };
@@ -289,7 +290,7 @@ const plants = [
                                 </div>
                             </v-col>
 
-                            <v-col cols="12" md="4" >
+                            <!-- <v-col cols="12" md="4" >
                                 <v-checkbox v-model="form.violenciaFisica"  label="Violencia física" hide-details required></v-checkbox>
                             </v-col>
 
@@ -303,7 +304,7 @@ const plants = [
 
                             <v-col cols="12" md="12" v-if="form.violenciaFisica">
                                 <v-text-field v-model="form.violenciaFisicaDescripcion" label="Descripción del echo y daño" hide-details required ></v-text-field>
-                            </v-col>
+                            </v-col> -->
 
                             <v-col cols="12" md="4" >
                                 <v-checkbox v-model="form.violenciaPsicologica"  label="Violencia psicológica" hide-details required></v-checkbox>
