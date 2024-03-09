@@ -39,7 +39,7 @@ const sidebarItem: menu[] = [
     to: "/convivencia/pacifica",
   },
   {
-    title: "Embarazo adolecente",
+    title: "Embarazo adolescente",
     icon: AlertCircleIcon,
     BgColor: 'primary',
     to: "/embarazo/adolecente",    

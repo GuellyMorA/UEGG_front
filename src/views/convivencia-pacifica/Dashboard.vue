@@ -14,7 +14,81 @@ const surface = theme.current.value.colors.surface;
 const lightprimary = theme.current.value.colors.lightprimary;
 const lilac = "#ccc3ff";
 const coffee = "#ce9166";
-const chartOptions = computed(() => {
+const chartOptions1 = computed(() => {
+    return {
+        series: [5368, 3500, 4106],
+        labels: [
+            "Derechos y deberes", 
+            "Normas y conductas", 
+            "Procedimientos disciplinarios", 
+            "Sanciones", 
+            "Procedimiento marco para la adopción de decisiones disciplinarias", 
+            "Procedimientos alternativos para la solución de conflictos", 
+            "Lineamientos para la remisión de informes sobre casos de violencia", 
+            "Programación de talleres de capacitación"
+        ],
+        chart: {
+            height: 150,
+            type: "donut",
+            fontFamily: "Plus Jakarta Sans', sans-serif",
+            foreColor: "#c6d1e9",
+        },
+
+        tooltip: {
+            theme: "dark",
+            fillSeriesColor: false,
+        },
+
+        colors: [primary, error, warning, success, secondary, info, lightprimary, lilac, coffee],
+        dataLabels: {
+            enabled: false,
+        },
+
+        legend: {
+            show: false,
+        },
+
+        stroke: {
+            show: false,
+        },
+        responsive: [
+            {
+                breakpoint: 991,
+                options: {
+                    chart: {
+                        width: 150,
+                    },
+                },
+            },
+        ],
+        plotOptions: {
+            pie: {
+                donut: {
+                    size: '70%',
+                    background: "none",
+                    labels: {
+                        show: true,
+                        name: {
+                            show: true,
+                            fontSize: "12px",
+                            color: undefined,
+                            offsetY: 5,
+                        },
+                        value: {
+                            show: false,
+                            color: "#98aab4",
+                        },
+                    },
+                },
+            },
+        },
+
+    };
+});
+const Chart1 = [34, 32, 25, 20, 16, 11, 14, 18];
+
+
+const chartOptions2 = computed(() => {
     return {
         series: [5368, 3500, 4106],
         labels: [
@@ -86,8 +160,7 @@ const chartOptions = computed(() => {
 
     };
 });
-const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
-
+const Chart2 = [17, 20, 24, 12, 20, 20, 3, 12, 14];
 </script>
 
 <template>
@@ -261,7 +334,56 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
             </div>
         </v-col>
 
-        <v-col cols="12" sm="12" lg="8">
+        <v-col cols="12" sm="12" lg="12">
+            <v-card elevation="10" class="withbg">
+                <v-card-item>
+                    <div class="d-sm-flex align-center justify-space-between pt-sm-2">
+                        <v-card-title class="text-h5">Actividades para promover la convivencia pacífica</v-card-title>
+                    </div>
+                    <v-row>
+                        <v-col cols="6" sm="8">
+                            <div class="mt-6">
+                                <h3 class="text-h4">170</h3>
+                                <div class="align-center mt-6 ml-1">
+                                    <h6 class="text-subtitle-2 text-muted pl-5">
+                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" color="primary"></v-icon> Derechos y deberes
+                                    </h6>
+                                    <h6 class="text-subtitle-2 text-muted pl-5">
+                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" color="error"></v-icon> Normas y conductas
+                                    </h6>
+                                    <h6 class="text-subtitle-2 text-muted pl-5">
+                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" color="warning"></v-icon> Procedimientos disciplinarios
+                                    </h6>
+                                    <h6 class="text-subtitle-2 text-muted pl-5">
+                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" color="success"></v-icon> Sanciones
+                                    </h6>
+                                    <h6 class="text-subtitle-2 text-muted pl-5">
+                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" color="secondary"></v-icon> Procedimiento marco para la adopción de decisiones disciplinarias
+                                    </h6>
+                                    <h6 class="text-subtitle-2 text-muted pl-5">
+                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" color="info"></v-icon> Procedimientos alternativos para la solución de conflictos
+                                    </h6>
+                                    <h6 class="text-subtitle-2 text-muted pl-5">
+                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" :style="`color: ${lightprimary}`"></v-icon> Lineamientos para la remisión de informes sobre casos de violencia
+                                    </h6>
+                                    <h6 class="text-subtitle-2 text-muted pl-5">
+                                        <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" :style="`color: ${lilac}`"></v-icon> Programación de talleres de capacitación
+                                    </h6> 
+                                </div>
+                            </div>
+                        </v-col>
+                        <v-col cols="6" sm="4" class="pl-lg-0">
+                            <div class="d-flex align-center flex-shrink-0">
+                                <apexchart type="donut" height="250" :options="chartOptions1" :series="Chart1">
+                                </apexchart>
+                            </div>
+                        </v-col>
+                    </v-row>
+                </v-card-item>
+            </v-card>
+        </v-col>
+
+        <v-col cols="12" sm="12" lg="12">
             <v-card elevation="10" class="withbg">
                 <v-card-item>
                     <div class="d-sm-flex align-center justify-space-between pt-sm-2">
@@ -270,7 +392,7 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                     <v-row>
                         <v-col cols="6" sm="8">
                             <div class="mt-6">
-                                <h3 class="text-h4">80</h3>
+                                <h3 class="text-h4">142</h3>
                                 <div class="align-center mt-6 ml-1">
                                     <h6 class="text-subtitle-2 text-muted pl-5">
                                         <v-icon icon="mdi mdi-checkbox-blank-circle" class="mr-1" size="10" color="primary"></v-icon> Movilización social
@@ -304,7 +426,7 @@ const Chart = [38, 40, 25, 10, 12, 8, 5, 25, 12];
                         </v-col>
                         <v-col cols="6" sm="4" class="pl-lg-0">
                             <div class="d-flex align-center flex-shrink-0">
-                                <apexchart type="donut" height="250" :options="chartOptions" :series="Chart">
+                                <apexchart type="donut" height="250" :options="chartOptions2" :series="Chart2">
                                 </apexchart>
                             </div>
                         </v-col>
